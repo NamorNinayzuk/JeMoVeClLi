@@ -53,7 +53,7 @@ node("ansible") {
         raise_vm("lighthouse", "--core-fraction 5 --cores 2 --memory 1GB --create-boot-disk size=10GB,image-folder-id=standard-images,image-family=centos-7")
     }
     stage("Get CVL Ansible roles") {
-        git branch: 'main', credentialsId: 'sa-github', url: 'git@github.com:ArtemShtepa/CVL-stack.git'
+        git branch: 'main', credentialsId: 'sa-github', url: 'git@github.com:NamorNinayzuk/JeMoVeClLi.git'
         sh 'ansible-galaxy install -r molecule/default/requirements.yml -p playbooks/roles/'
     }
     stage("Write inventory") {
