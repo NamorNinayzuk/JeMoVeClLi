@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Get JeMoVeClLi roles') {
+            steps {
+                git branch: 'main', credentialsId: 'sa-github', url: 'git@github.com:NamorNinayzhuk/JeMoVeClLi.git'
+            }
+        }
+        stage('Molecute Test') {
+            steps {
+                sh 'molecule test'
+            }
+        }
+    }
+}
