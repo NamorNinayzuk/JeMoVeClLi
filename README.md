@@ -10,8 +10,8 @@ Jenkins+Molecule+Vector+Clickhouse+Lighthuse
 Файл ` DeclarativeJenkinsfile ` для Declarative pipeline  
 Файл `Jenkinsfile` для Multibranch pipeline (репозиторий содержит две ветки: main и second - с разными версиями Jenkinsfile и converge.yml)  
 Файл `ScriptedJenkinsfile` для простого Scripted pipeline тестировании ролей в Molecule  
-Файл `ScriptedCVLstackJenkinsfile` для Scripted pipeline автоматизации создания машинок в Яндекс.Облаке и разворачивании на них всего CVL стека  
-Файл `playbooks/demo.yml` - Ansible playbook для разворачивания CVL стека. Требует inventory файл. Используется в скрипте автоматизации ScriptedCVLstackJenkinsfile  
+Файл `ScriptedJeMoVeClLiJenkinsfile` для Scripted pipeline автоматизации создания машинок в Яндекс.Облаке и разворачивании на них всего JeMoVeClLi стека  
+Файл `playbooks/demo.yml` - Ansible playbook для разворачивания JeMoVeClLi стека. Требует inventory файл. Используется в скрипте автоматизации ScriptedJeMoVeClLiJenkinsfile  
 
 2. Испытывался только на CentOS 7  
 
@@ -27,6 +27,4 @@ Jenkins+Molecule+Vector+Clickhouse+Lighthuse
 `verify` - основной playbook Molecule для этапа verify - верифицирует установку Vector и Lighthouse, создаёт контролируемые Vector файлы и наполняет их содержимым  
 `verify_clickhouse` - playbook запрашивает данные из Clickhouse и сравнивает их с эталоном. Реализован отдельно с поддержкой нескольких итераций, так как из-за особенностей реализации Vector не все данные сразу отправляются в Clickhouse.  
   
-  
-~~Для успешного функционирования всего стека ролям сервисов Vector и Lighthouse нужно передать IP адрес сервиса Clickhouse внутри сети контейнеров Docker. По умолчанию Molecule создаёт контейнеры в сети в драйвером bridge. Определение IP адреса контейнера Clickhouse и передача его другим осуществляется в play с именем Detect Clickhouse IP. Для ручного контроля используемые порты проброшены в основную систему и доступны по локальному IP адресу 127.0.0.1~~
 
