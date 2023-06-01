@@ -6,7 +6,8 @@ Jenkins+Molecule+Vector+Clickhouse+Lighthuse
 Примечание:
 
 
-1.Jenkins
+1.Jenkins  
+
 Файл ` DeclarativeJenkinsfile ` для Declarative pipeline  
 Файл `Jenkinsfile` для Multibranch pipeline (репозиторий содержит две ветки: main и second - с разными версиями Jenkinsfile и converge.yml)  
 Файл `ScriptedJenkinsfile` для простого Scripted pipeline тестировании ролей в Molecule  
