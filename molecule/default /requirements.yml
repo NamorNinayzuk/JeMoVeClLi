@@ -1,0 +1,20 @@
+---
+roles:
+  - name: clickhouse-role
+    src: git@github.com:NamorNinayzuk/ansible-clickhouse.git
+    scm: git
+  
+  - name: vector-role
+    src: git@github.com:NamorNinayzuk/vector-role.git
+    scm: git
+   
+  - name: lighthouse-role
+    src: git@github.com:NamorNinayzuk/lighthouse-role.git
+    scm: git
+   
+
+collections:
+  - name: My ansible collection
+    source: https://github.com/NamorNinayzuk/ansible-collection.git
+    type: git
+...
